@@ -1,6 +1,8 @@
 # telegram_truco_bot
 Um bot para jogar truco no Telegram
 
+## Em desenvolvimento*
+
 ## Configuração de variaveis
 Crie um arquivo chamado ".env" no diretorio raiz, e defina as variaveis:
 
