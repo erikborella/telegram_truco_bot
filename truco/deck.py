@@ -5,7 +5,7 @@ from .card import Card
 class Deck:
 
     def __init__(self):
-        self.deck: List(Card) = []
+        self.deck: List[Card] = []
         self.taken: List[Card] = []
 
         self.__initDeck()
