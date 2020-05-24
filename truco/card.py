@@ -10,12 +10,23 @@ class Card():
             'c': 'Copas'
         }.get(suit, None)
 
-    def __init__(self, suit, value):
+    @staticmethod
+    def convert_value_to_portuguese(value: int) -> str:
+        
+        return {
+            1: 'Ás',
+            10: 'Valete',
+            11: 'Cavalo',
+            12: 'Velha'
+        }.get(value, value)
+
+    def __init__(self, suit: str, value: int):
 
         self.suit = suit
         self.value = value
 
     def __repr__(self):
         return 'Carta: {} de {}'.format(
-            self.value, self.convert_suit_to_portuguese(self.suit)
+            self.convert_value_to_portuguese(self.value), 
+            self.convert_suit_to_portuguese(self.suit)
         )
