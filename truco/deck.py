@@ -1,6 +1,6 @@
 import random
 from typing import List
-from .card import Card
+from . import Card
 
 class Deck:
 
