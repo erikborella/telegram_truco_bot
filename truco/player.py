@@ -4,11 +4,12 @@ from . import Card
 
 class Player():
     
-    def __init__(self, team: int):
+    def __init__(self, name: str, team: int):
 
+        self.name = name
         self.team: int = team
         self.hand: List[Card] = []
-        self.status: str = ''
+        self.status: str = 'idle'
 
 
     def add_card_to_hand(self, card: Card) -> bool:
@@ -27,3 +28,6 @@ class Player():
 
         except:
             return None
+
+    def __eq__(self, other) -> bool:
+        return self.name == other.name and self.team == other.team
